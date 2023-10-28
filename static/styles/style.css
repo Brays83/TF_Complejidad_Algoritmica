@@ -1,0 +1,44 @@
+
+
+
+label{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.title{
+    color: white;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#cont-form{
+    border-style: dashed;
+    border-color: white;
+    border-radius: 10px;
+}
+
+#raitingValue{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#hero{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+}
+
+.body-s {
+    background-color:rgba(95, 2, 2, 0.863) ;
+    
+
+}
+
+
+.gif img{
+    width: 250px;
+}
+
+

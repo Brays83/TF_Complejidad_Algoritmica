@@ -1,0 +1,134 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-center flex-column text-center">
+
+    <spam class="pt-5 pb-5" id="hero">¿Que caracteristicas buscas en tu <br>pelicula ideal?</spam>
+
+    <form action="/" method="post" class="p-4">
+        <div class="container text-center p-4  " id="cont-form">
+            <div class="row align-items-end">
+
+                <div class="col" >
+                    <label for="year">Año</label>
+                    <input type="number" name="year" class="form-control">
+                </div>
+
+                <div class="col" >
+                    
+                    <label for="category">Categoria</label>
+                    <select class="form-select" name="category">
+                        <option selected>Selecciona la Categoria</option>
+                        <option value="5">Comedia</option>
+                        <option value="5">Accíon</option>
+                        <option value="5">Aventura</option>
+                        <option value="4">Ciencia Ficcion</option>
+                        <option value="4">Romance</option>
+                        <option value="4">Terror</option>
+                        <option value="4">Misterio</option>
+                        <option value="4">Fantasia</option>
+                        <option value="4">Drama</option>
+                        <option value="3">Crimen</option>
+                        <option value="3">Musical</option>
+                        <option value="3">SuperHeroes</option>
+                        <option value="3">Princesas</option>
+                        <option value="2">Navidad</option>
+                        <option value="2">Haloween</option>
+                        <option value="1">Biografia</option>
+                        <option value="1">Documental</option>
+                        <option value="1">Stand Up</option>
+                    </select>
+
+                </div>
+
+                <div class="col" >
+                    <label for="subcategory">SubCategoria</label>
+                    <select class="form-select" name="subcategory">
+                        <option selected>Selecciona la Categoria</option>
+                        <option value="5">Comedia</option>
+                        <option value="5">Accíon</option>
+                        <option value="5">Aventura</option>
+                        <option value="4">Ciencia Ficcion</option>
+                        <option value="4">Romance</option>
+                        <option value="4">Terror</option>
+                        <option value="4">Misterio</option>
+                        <option value="4">Fantasia</option>
+                        <option value="4">Drama</option>
+                        <option value="3">Crimen</option>
+                        <option value="3">Musical</option>
+                        <option value="3">SuperHeroes</option>
+                        <option value="3">Princesas</option>
+                        <option value="2">Navidad</option>
+                        <option value="2">Haloween</option>
+                        <option value="1">Biografia</option>
+                        <option value="1">Documental</option>
+                        <option value="1">Stand Up</option>
+                        <option value="4">Suspenso</option>
+                        <option value="1">Animal</option>
+                        <option value="0">Ninguna</option>
+                    </select>
+                </div>
+
+                
+            </div>
+            <div class="row ">
+                <div class="col">
+                    <br><br>
+                    <label for="raiting" class="form-label">Calificacion</label>
+                    <input type="range" min="0" max="100" class="form-range" name="raiting" id="raitingRange">
+                    <span id="raitingValue">50</span>
+                </div>
+                
+                <div class="col pt-3" >
+                    <div class="row">
+                        <label for="streming">Plataforma</label>
+                    </div>
+                    <div class="row p-3" id="cont-form" >
+                        <select class="form-select" name="streming">
+                            <option selected>Selecciona la plataforma</option>
+                            <option value="Netflix">Netflix</option>
+                            <option value="Hulu">Hulu</option>
+                            <option value="Amazon">Amazon Prime</option>
+                            <option value="Disney">Disney+</option>
+                        </select>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="year_old">Edad</label>
+                    <select class="form-select" name="year_old">
+                    <option selected>Selecciona Edad</option>
+                    <option value="0">All</option>
+                    <option value="1">18</option>
+                    <option value="2">16</option>
+                    <option value="3">13</option>
+                    <option value="4">7</option>
+                    </select>
+                </div>
+                <div class="col pt-3">
+                    <input type="submit" value="Recomedar" class="btn btn-success">
+                </div>
+    
+            </div>
+
+        </div>
+
+
+    </form>
+
+    <div class="gif" >
+        <img src="https://media3.giphy.com/media/7dgrvKQ0W1GJc7tzhD/200w.webp" >
+    </div>
+
+
+
+</div>
+{% if error %}
+<p style="color: white;">{{error}}</p>
+{% endif %}
+
+{% endblock %}
