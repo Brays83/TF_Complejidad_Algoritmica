@@ -4,7 +4,7 @@ sys.path.append('./data/entity')
 from movie import Movie
 from grafo import Grafo
 
-def ReadData():
+def ReadData(year,platform):
     grafoPadre = Grafo("Padre")
     grafoPadre.Agregar_Vertice("Netflix")
     grafoPadre.Agregar_Vertice("Hulu")

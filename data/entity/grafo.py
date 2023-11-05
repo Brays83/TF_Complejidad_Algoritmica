@@ -25,27 +25,23 @@ class Grafo:
             print(nodo, "-->",[i for i in self.vertices[nodo]])
       #return self.vertices
     
-    def dfs(self,source):
-        nodes = len(self.vertices)
-        visited = [False] * nodes
-        print(source)
-        print(nodes)
-        for i in self.vertices:
-           print(self.vertices)
-        #print(visited)
+    def dfs(self, source):
+        visited = set()
 
         def recursion(node):
             # 1er paso: Marcar como visitado
-            visited[node] = True
+            visited.add(node)
 
             # Procesar el nodo (haz la operación que quieras)
             print(node)
 
             # Llamo a que la recursión visite los vecinos NO visitados
             for neighbour in self.vertices[node]:
-                if not visited[neighbour]:
+                if neighbour not in visited:
                     recursion(neighbour)
+
         recursion(source)
+
 
 
 
