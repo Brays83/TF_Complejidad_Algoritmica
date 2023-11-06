@@ -1,0 +1,2 @@
+def calculo(year,categoria,subcategoria,calificacion,edad,Iyear,Icategoria,Isubcategoria,Icalificacion,Iedad):
+    return ((abs(year-Iyear)+abs(edad-Iedad)+abs(calificacion-Icalificacion))/(abs(categoria-Icategoria)+(abs(subcategoria-Isubcategoria)/2)+1))
