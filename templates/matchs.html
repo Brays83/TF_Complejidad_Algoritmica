@@ -4,5 +4,22 @@
 
 <h1 class="title"><u>Tus Matchs</u></h1>
 
+<div class="row p-2">
+  {% for movie in Movies %}
+  <div class="col p-2">
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Titulo: {{movie.getName()}}</p>
+        <p class="card-text">Año: {{movie.getYear()}}</p>
+        <p class="card-text">Edad: {{movie.getAge()}}</p>
+        <p class="card-text">Categoria: {{movie.getCategory()}}</p>
+        <p class="card-text">SubCategoria: {{movie.getsubCategory()}}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
 
 {% endblock %}

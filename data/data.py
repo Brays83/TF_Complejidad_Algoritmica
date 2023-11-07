@@ -65,13 +65,13 @@ def ReadData(year,categoria,subcategoria,calificacion,edad,platform):
         for row in reader:
             movie = Movie(row[0],row[1],int(row[2]),row[3],int(row[4]),row[5],row[6],int(row[7]),int(row[8]),int(row[9]),int(row[10]))
             grafoPadre.Agregar_Vertice(movie)
-            
+            #Normalizar CATEGORIA Valor actual- valor minimo/valor maximo-valor minimo
             if(movie.getnetflix() == True):
                 grafoPadre.agregar_arista("Netflix",
                     movie,
                     calculo(movie.getYear(),
-                    opciones[movie.getCategory()],
-                    opciones[movie.getsubCategory()],
+                    opciones[movie.getCategory()]/22,
+                    opciones[movie.getsubCategory()]/22,
                     movie.getRating(),
                     D_edad[movie.getAge()],year,categoria,subcategoria,calificacion,edad))
     
@@ -79,24 +79,24 @@ def ReadData(year,categoria,subcategoria,calificacion,edad,platform):
                 grafoPadre.agregar_arista("Hulu",
                     movie,
                     calculo(movie.getYear(),
-                    opciones[movie.getCategory()],
-                    opciones[movie.getsubCategory()],
+                    opciones[movie.getCategory()]/22,
+                    opciones[movie.getsubCategory()]/22,
                     movie.getRating(),
                     D_edad[movie.getAge()],year,categoria,subcategoria,calificacion,edad))
             elif(movie.getPrime()==True):
                 grafoPadre.agregar_arista("Amazon",
                     movie,
                     calculo(movie.getYear(),
-                    opciones[movie.getCategory()],
-                    opciones[movie.getsubCategory()],
+                    opciones[movie.getCategory()]/22,
+                    opciones[movie.getsubCategory()]/22,
                     movie.getRating(),
                     D_edad[movie.getAge()],year,categoria,subcategoria,calificacion,edad))
             elif(movie.getDisney()==True):
                 grafoPadre.agregar_arista("Disney",
                     movie,
                     calculo(movie.getYear(),
-                    opciones[movie.getCategory()],
-                    opciones[movie.getsubCategory()],
+                    opciones[movie.getCategory()]/22,
+                    opciones[movie.getsubCategory()]/22,
                     movie.getRating(),
                     D_edad[movie.getAge()],year,categoria,subcategoria,calificacion,edad))
 
@@ -104,16 +104,19 @@ def ReadData(year,categoria,subcategoria,calificacion,edad,platform):
         return grafoPadre
     
 
-h = ReadData(2010,5,5,80,1,'Netflix')
+##h = ReadData(2010,5,5,50,1,'Netflix')
 
 #h.mostrar_vertices()
 
-h.dfs('Netflix')
-print("----------------------")
-h.mostrar_vertices()
-#h.MostrarBiblioteca()
+##h.dfs('Netflix')
 
-for i in range(len(h.MoviesRecomendadas)):
-    print(h.MoviesRecomendadas[i].getName())
+##print("----------------------")
+##h.mostrar_vertices()
+#h.MoviesRecomendadas()
+#h.MostrarBiblioteca()
+##print("----------------------")
+##h.MostrarPeliculasRecomendadas('Netflix')
+##h.PesoMaximo()
+
 
 
