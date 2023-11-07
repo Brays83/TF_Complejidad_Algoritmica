@@ -85,7 +85,7 @@ class Grafo:
                     print("Peso + al eliminar: ",self.mayor)
                     print("Indice + al eliminar: ",self.i_mayor)
                     print("Pelicula agregada: ",node.getName())
-                    self.MostrarPeliculasRecomendadas(Plataforma)
+                    #self.MostrarPeliculasRecomendadas(Plataforma)
 
 
 
