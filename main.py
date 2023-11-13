@@ -6,6 +6,7 @@ import data
 
 @app.route("/",methods =['GET','POST'])
 def home():
+    PeliculasRecomendadas = []
     if request.method == 'POST':
 
         year =request.form['year']
@@ -32,11 +33,12 @@ def home():
 
         #return redirect(url_for('matchs',PeliculasRecomendadas))
         return render_template('matchs.html',Movies=PeliculasRecomendadas)
-    return render_template('home.html',)
+    return render_template('home.html')
 
 
 @app.route("/matchs")
 def matchs():
+    
     
     return render_template('matchs.html',)
 

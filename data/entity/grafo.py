@@ -63,8 +63,7 @@ class Grafo:
                         print("if==0")
                         self.MoviesRecomendadas.append(node)
                         self.mayor = self.vertices[Plataforma][node]
-                        self.i_mayor = len(self.MoviesRecomendadas)-1
-                        
+                        self.i_mayor = len(self.MoviesRecomendadas)-1             
                     else:
                         print("if<0")
                         self.MoviesRecomendadas.append(node)
@@ -77,8 +76,7 @@ class Grafo:
                             self.mayor = self.vertices[Plataforma][movie]
                             self.i_mayor = self.MoviesRecomendadas.index(movie)
                     print("======================================")
-                    #posible erro por aca
-                     
+                    #posible erro por aca 
                     ##temp=self.MoviesRecomendadas.remove(self.MoviesRecomendadas[self.i_mayor])
                     print("Pelicula eliminada: ",self.MoviesRecomendadas.pop(self.i_mayor).getName())
                     self.MoviesRecomendadas.append(node)    
@@ -86,12 +84,6 @@ class Grafo:
                     print("Indice + al eliminar: ",self.i_mayor)
                     print("Pelicula agregada: ",node.getName())
                     #self.MostrarPeliculasRecomendadas(Plataforma)
-
-
-
-                    
-                
-
 
             # Llamo a que la recursión visite los vecinos NO visitados
             for neighbour in self.vertices[node]:

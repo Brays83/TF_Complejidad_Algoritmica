@@ -72,7 +72,7 @@ def ReadData(year,categoria,subcategoria,calificacion,edad,platform):
                     calculo(movie.getYear(),
                     opciones[movie.getCategory()]/22,
                     opciones[movie.getsubCategory()]/22,
-                    movie.getRating(),
+                    movie.getRating()/100,
                     D_edad[movie.getAge()],year,categoria,subcategoria,calificacion,edad))
     
             elif(movie.gethulu()==True):
@@ -81,7 +81,7 @@ def ReadData(year,categoria,subcategoria,calificacion,edad,platform):
                     calculo(movie.getYear(),
                     opciones[movie.getCategory()]/22,
                     opciones[movie.getsubCategory()]/22,
-                    movie.getRating(),
+                    movie.getRating()/100,
                     D_edad[movie.getAge()],year,categoria,subcategoria,calificacion,edad))
             elif(movie.getPrime()==True):
                 grafoPadre.agregar_arista("Amazon",
@@ -89,7 +89,7 @@ def ReadData(year,categoria,subcategoria,calificacion,edad,platform):
                     calculo(movie.getYear(),
                     opciones[movie.getCategory()]/22,
                     opciones[movie.getsubCategory()]/22,
-                    movie.getRating(),
+                    movie.getRating()/100,
                     D_edad[movie.getAge()],year,categoria,subcategoria,calificacion,edad))
             elif(movie.getDisney()==True):
                 grafoPadre.agregar_arista("Disney",
@@ -97,7 +97,7 @@ def ReadData(year,categoria,subcategoria,calificacion,edad,platform):
                     calculo(movie.getYear(),
                     opciones[movie.getCategory()]/22,
                     opciones[movie.getsubCategory()]/22,
-                    movie.getRating(),
+                    movie.getRating()/100,
                     D_edad[movie.getAge()],year,categoria,subcategoria,calificacion,edad))
 
             #Movies.append(Movie(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9],row[10]))
